@@ -1,0 +1,25 @@
+install:
+	uv sync
+
+collectstatic:
+	uv run python3 manage.py collectstatic --noinput
+
+migrate:
+	uv run python3 manage.py migrate
+
+build:
+	./build.sh
+
+render-start:
+	uv sync
+	uv run gunicorn formula_neuronetwork.wsgi
+#	gunicorn formula_neuronetwork.wsgi
+
+setup:
+	cp -n .env.example .env || true
+	make install
+	make collectstatic
+	make migrate
+
+lint:
+	uv run ruff check formula_neuronetwork
