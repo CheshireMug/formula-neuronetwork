@@ -1,0 +1,25 @@
+:root {
+    --dark-teal: #0f4c5c;
+    --teal: #137c8b;
+    --light-teal: #1fa3b1;
+}
+
+.navbar.bg-teal {
+    --bs-navbar-bg: var(--teal);
+}
+
+.btn-primary {
+    background-color: var(--teal);
+    border-color: var(--teal);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--light-teal);
+    border-color: var(--light-teal);
+}
+
+.btn-primary:active {
+    background-color: var(--dark-teal);
+    border-color: var(--dark-teal);
+}

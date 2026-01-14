@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container wrapper flex-grow-1">
+
+      {% if messages %}
+        <div class="container mt-3">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <h1 class="my-4">  </h1> 
+        <h1 class="my-4"></h1>
+        <div class="card">
+        <div class="card-body p-5 bg-light">
+            <div class="display-4">Formula neuronetwork</div>
+            <p class="lead">
+                Formula Neuronetwork — это веб-приложение для распознавания 
+                рукописных математических формул. Пользователь загружает изображение 
+                с формулой, после чего система автоматически преобразует её в LaTeX-код 
+                и отображает результат для проверки и редактирования. 
+                После подтверждения корректности формулы приложение позволяет 
+                получить структурированное представление выражения и сгенерировать 
+                функцию для дальнейших вычислений. Проект предназначен для упрощения 
+                работы с математическими записями и может быть использован в учебной 
+                и научной деятельности.
+            </p>
+            <hr>
+            
+        </div>
+        </div>
+    </div>
+{% endblock %}
